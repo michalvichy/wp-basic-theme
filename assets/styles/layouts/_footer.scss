@@ -1,0 +1,25 @@
+// Footer component
+// -----------------
+.c-footer {
+  padding: 20px 0 10px;
+  border-top: 1px solid $white;
+}
+
+.c-footer__menu {
+
+}
+
+.c-footer__menu-item {
+  color: $white;
+
+  & + & {
+    border-left: 1px solid $color-gray;
+  }
+}
+
+.c-footer__menu-link {
+  display: block;
+  padding: 0 8px;
+  color: $color-gray;
+  text-decoration: none;
+}
