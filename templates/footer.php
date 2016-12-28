@@ -1,6 +1,6 @@
 <div class="o-base">
-    <div class="o-container">
-        <footer class="c-footer">
+    <footer class="c-footer">
+        <div class="o-container">
             <div class="row middle-xs">
                 <div class="col-md-5">
                     <img src="<?= get_template_directory_uri(); ?>/dist/images/footer_logo.png" alt="footer-logo">
@@ -29,6 +29,6 @@
                     <a href="/contact" class="u--uppercase">Kontakt</a>
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </div>

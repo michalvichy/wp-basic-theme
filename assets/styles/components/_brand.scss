@@ -1,0 +1,12 @@
+// Brand logos
+// -------------
+.c-brand {
+  @include square(43px);
+  display: inline-block;
+  background: {
+    image: url('../images/logo.png');
+    size: contain;
+    repeat: no-repeat;
+  }
+  text-indent: -333333em;
+}

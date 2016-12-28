@@ -1,0 +1,14 @@
+// Paragraphs
+// -----------
+@mixin paragraph() {
+  font-weight: 300;
+  line-height: 1.5;
+
+  @include min-screen($desktop) {
+    font-size: 15px;
+  }
+}
+
+.c-paragraph {
+  @include paragraph();
+}

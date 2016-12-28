@@ -1,12 +1,17 @@
 .o-base {
-  width: $base-width;
+  max-width: $base-width;
   margin: 0 auto;
 }
 
 .o-container {
-  width: $container-width;
+  max-width: $container-width;
   margin: 0 auto;
 }
 
+.o-btn-container {
+  margin: 20px 0;
+}
+
 .o-section {
+  padding: 20px 0 30px;
 }

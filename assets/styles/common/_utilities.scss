@@ -50,6 +50,18 @@
   }
 }
 
+.u--bg-black {
+  background-color: $black;
+}
+
+.u--border-top {
+  border-top: $border;
+}
+
+.u--border-bottom {
+  border-bottom: $border;
+}
+
 
 // Flex
 .u--inline-flex {
@@ -102,6 +114,10 @@
 }
 
 // Text colors
+.u--text-primary {
+  color: $color-primary;
+}
+
 .u--text-gray {
   color: $color-gray;
 }

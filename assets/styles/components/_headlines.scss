@@ -1,0 +1,41 @@
+// Headlines
+// ----------
+.c-headline {
+  position: relative;
+  font-weight: 300;
+
+  @include min-screen($desktop) {
+    margin-bottom: 36px;
+    font-size: 28px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(100% + 16px);
+    height: 1px;
+    background-color: $color-primary;
+
+    @include min-screen($desktop) {
+      width: 62px;
+    }
+  }
+}
+
+.c-headline--medium {
+  font-weight: 600;
+  text-transform: uppercase;
+
+  @include min-screen($desktop) {
+    font-size: 15px;
+  }
+}
+
+.c-headline--center {
+  text-align: center;
+
+  &::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

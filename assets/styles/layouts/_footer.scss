@@ -2,11 +2,8 @@
 // -----------------
 .c-footer {
   padding: 20px 0 10px;
-  border-top: 1px solid $white;
-}
-
-.c-footer__menu {
-
+  border-top: $border;
+  background-color: $color-secondary;
 }
 
 .c-footer__menu-item {
