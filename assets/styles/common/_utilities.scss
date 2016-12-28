@@ -1,31 +1,107 @@
 // Utilities
 // ---------
 .u--align-left {
-    text-align: left;
+  text-align: left;
 }
 
 .u--align-right {
-    text-align: right;
+  text-align: right;
 }
 
 .u--align-center {
-    text-align: center;
+  text-align: center;
 }
 
 .u--text-underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.u--clear-fix {
-    &::after {
-        content: '';
-        display: block;
-        clear: both;
-    }
+.u--clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 }
 
 .u--image-responsive {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.u--uppercase {
+  text-transform: uppercase;
+}
+
+.u--full-width {
+  width: 100%;
+}
+
+.u--relative {
+  position: relative;
+}
+
+.u--inline-list {
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+  }
+}
+
+
+// Flex
+.u--inline-flex {
+  display: inline-flex !important;
+}
+
+.u--flex {
+  display: flex;
+}
+
+.u--flex-wrap {
+  flex-wrap: wrap;
+}
+
+.u--justify-center {
+  justify-content: center;
+}
+
+.flex-1 {
+  flex-grow: 1;
+}
+
+.flex-2 {
+  flex-grow: 2;
+}
+
+// Vertical align
+.u--middle-align {
+  vertical-align: middle;
+}
+
+.u--super-align {
+  vertical-align: super;
+}
+
+.u--bottom-align {
+  vertical-align: bottom;
+}
+
+.u--sub-align {
+  vertical-align: sub !important;
+}
+
+.u--top-align {
+  vertical-align: top !important;
+}
+
+.u--text-top-align {
+  vertical-align: text-top;
+}
+
+// Text colors
+.u--text-gray {
+  color: $color-gray;
 }

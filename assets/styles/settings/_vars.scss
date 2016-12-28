@@ -1,6 +1,17 @@
 $global-font-size: 100% !default;
+$global-font-family: 'Open Sans';
+$base-font-size: 14px;
 
 // Colors
 // ----------
 $white: #ffffff;
 $black: #000000;
+
+$color-primary: #f0d1a1;
+$color-secondary: #222222;
+$color-gray: #a7a7a7;
+
+// Layout variables
+// -----------------
+$base-width: 1300px;
+$container-width: 1140px;

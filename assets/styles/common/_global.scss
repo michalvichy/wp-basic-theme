@@ -1,1 +1,25 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
+html,
+body {
+  position: relative;
+  height: 100%;
+  background-color: $color-secondary;
+  color: $white;
+  font-family: $global-font-family;
+  font-size: $base-font-size;
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
