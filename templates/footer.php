@@ -2,14 +2,14 @@
     <footer class="c-footer">
         <div class="o-container">
             <div class="row middle-xs">
-                <div class="col-md-5">
+                <div class="col-md-5 last-xs">
                     <img src="<?= get_template_directory_uri(); ?>/dist/images/footer_logo.png" alt="footer-logo">
                     <p class="u--text-12 u--text-gray">Copyright © 2016 Nespresso. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-2">
                     <a href="/" class="u--uppercase">Strona główna</a>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 first-xs">
                     <ul class="c-footer__menu u--inline-list">
                         <li class="c-footer__menu-item">
                             <a href="#" class="c-footer__menu-link">Edycja IV</a>
@@ -25,7 +25,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-1">
+                <div class="col-md-1 last-xs">
                     <a href="/contact" class="u--uppercase">Kontakt</a>
                 </div>
             </div>

@@ -1,5 +1,9 @@
 // Navigation
 // -----------
 .o-navigation {
-  padding: 28px (($base-width - $container-width) / 2) 14px;
+  padding: 20px;
+
+  @include min-screen($desktop) {
+    padding: 28px (($base-width - $container-width) / 2) 14px;
+  }
 }

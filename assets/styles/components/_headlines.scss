@@ -2,10 +2,11 @@
 // ----------
 .c-headline {
   position: relative;
+  margin-bottom: 36px;
+  font-size: 20px;
   font-weight: 300;
 
   @include min-screen($desktop) {
-    margin-bottom: 36px;
     font-size: 28px;
   }
 
@@ -13,16 +14,14 @@
     content: '';
     position: absolute;
     top: calc(100% + 16px);
+    width: 65px;
     height: 1px;
     background-color: $color-primary;
-
-    @include min-screen($desktop) {
-      width: 62px;
-    }
   }
 }
 
 .c-headline--medium {
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
 
