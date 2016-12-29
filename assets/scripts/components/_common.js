@@ -2,6 +2,7 @@ window.NS = window.NS || {};
 
 window.NS.common = function($) {
   var cookieUser = 'cookieUser';
+  var $overlay = $('.js-overlay');
 
   function goToTopButton() {
     var $button = $('.js-to-top');
@@ -73,4 +74,21 @@ window.NS.common = function($) {
       }
     });
   }
+
+  function openOverlay() {
+    $('.js-overlay-open').on('click', function() {
+      $overlay.addClass('is-open');
+    });
+  }
+
+  function closeOverlay() {
+    $('.js-overlay-close').on('click', function(event) {
+      $overlay.removeClass('is-open');
+    });
+  }
+
+  (function() {
+    openOverlay();
+    closeOverlay();
+  })();
 };

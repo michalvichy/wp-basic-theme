@@ -17,6 +17,16 @@
   }
 }
 
+.c-edition__preview--static {
+  @include rectangle(433px, 200px);
+  display: inline-block;
+  border: $border;
+
+  & + & {
+    margin-top: 20px;
+  }
+}
+
 .c-edition__preview-container {
   height: 200px;
   padding: 110px 0 0;

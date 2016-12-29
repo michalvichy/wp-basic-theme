@@ -1,7 +1,11 @@
 <?php
+    setlocale(LC_TIME, 'pl_PL.UTF-8');
     $fields = CFS()->get(false, false);
     $report = $fields['edition_report'];
-    $edition_date = $fields['edition_date'];
+    $date_field = $fields['edition_date'];
+    $date = date_create($date_field);
+    $date = strftime('%d %B %G', strtotime($date_field));
+    $city = $fields['edition_city'];
 ?>
 
 
@@ -10,8 +14,8 @@
         <div class="o-container">
             <div class="row middle-sm">
                 <div class="col-sm-4 col-lg-3">
-                    <span class="c-edition__title"><?= the_title(); ?></span><span class="u--text-primary">Zmień</span>
-                    <p class="c-edition__date"><?= $edition_date; ?></p>
+                    <span class="c-edition__title"><?= the_title(); ?></span><span class="u--text-primary u--pointer js-overlay-open">Zmień</span>
+                    <p class="c-edition__date"><?= $date; ?> <?= $city; ?></p>
                 </div>
                 <div class="col-sm-8 col-lg-9">
                     <ul class="c-edition__top-menu u--inline-list">
@@ -44,3 +48,5 @@
         </div>
     </div>
 </div>
+
+<?php get_template_part('templates/editions', 'overlay'); ?>

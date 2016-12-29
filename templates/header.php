@@ -1,3 +1,5 @@
+<?php $foobar = 123; ?>
+
 <div class="o-base u--bg-black">
     <div class="o-navigation">
         <div class="row middle-xs">
