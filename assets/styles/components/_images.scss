@@ -1,0 +1,9 @@
+// Images
+// -------
+.c-image-hover {
+  transition: transform $img-animation;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

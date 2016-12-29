@@ -29,6 +29,7 @@
 
 .c-edition__preview-title {
   margin: 0;
+
   @include min-screen($desktop) {
     margin: 10px 0;
     font-size: 26px;
@@ -37,10 +38,71 @@
 
 .c-edition__preview-city {
   margin: 0;
-  color: #D6D6D6;
+  color: $color-tertiary;
   font-weight: 700;
 
   @include min-screen($desktop) {
     font-size: 12px;
+  }
+}
+
+.c-edition__top {
+  padding: 25px 0;
+  background: {
+    image: url('../images/edition_menu_bg.png');
+    size: cover;
+    repeat: no-repeat;
+  }
+}
+
+.c-edition__top-menu {
+  li + li {
+    margin-left: 10px;
+  }
+}
+
+.c-edition__title {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  @include min-screen($desktop) {
+    margin-right: 5px;
+    font-size: 26px;
+  }
+}
+
+.c-edition__date {
+  color: $color-tertiary;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @include min-screen($desktop) {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+
+.c-edition__gallery-intro {
+  display: inline-block;
+  position: relative;
+  margin: 20px auto;
+  border: $border;
+  cursor: pointer;
+  overflow: hidden;
+
+  .c-btn {
+    @include center-align();
+  }
+}
+
+.s-edition__content {
+  padding: 1px 0;
+
+  p {
+    @include paragraph();
+
+    @include min-screen($desktop) {
+      margin: 28px 0;
+    }
   }
 }

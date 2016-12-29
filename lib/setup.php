@@ -101,3 +101,8 @@ function assets() {
     wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+/**
+ * Custom thumbnail sizes
+ */
+ add_image_size('edition-thumb', 433, 200, true);

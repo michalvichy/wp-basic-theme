@@ -4,7 +4,7 @@
         /**
          * Register a achievement post type.
          */
-        $labels_achivments = array(
+        $labels_edition = array(
             'name'               => 'Edycje',
             'singular_name'      => 'Edycja',
             'menu_name'          => 'Edycje',
@@ -21,7 +21,7 @@
             'not_found_in_trash' => 'Nie znaleziono edycji w koszu'
         );
         $args = array(
-            'labels'             => $labels_achivments,
+            'labels'             => $labels_edition,
             'public'             => true,
             'publicly_queryable' => true,
             'show_ui'            => true,
@@ -35,6 +35,6 @@
             'supports'           => array('title', 'thumbnail', 'excerpt'),
             'menu_icon'          => 'dashicons-media-video'
         );
-        register_post_type( 'ak_achivments', $args );
+        register_post_type( 'edition', $args );
     }
 ?>

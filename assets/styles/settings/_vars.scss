@@ -9,6 +9,7 @@ $black: #000000;
 
 $color-primary: #f0d1a1;
 $color-secondary: #222222;
+$color-tertiary: #d6d6d6;
 $color-gray: #a7a7a7;
 
 // Layout variables
@@ -16,3 +17,6 @@ $color-gray: #a7a7a7;
 $base-width: 1300px;
 $container-width: 1140px;
 $border: 1px solid $white;
+
+$img-animation-time: 1000ms;
+$img-animation: $img-animation-time cubic-bezier(.49, .17, .07, 1.23);
