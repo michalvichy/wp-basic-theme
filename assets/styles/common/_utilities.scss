@@ -66,6 +66,10 @@
   cursor: pointer;
 }
 
+.u--horizontal {
+  @include horizontal-align();
+}
+
 
 // Flex
 .u--inline-flex {

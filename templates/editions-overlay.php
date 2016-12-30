@@ -20,10 +20,11 @@
                     $city = CFS() -> get('edition_city', $post_id);
                     $url = get_permalink($post_id);
         ?>
-                <a href="<?= $url ?>" class="c-edition__preview--static">
-                    <div class="c-edition__preview-container" style="background-image: url('<?= the_post_thumbnail_url('edition-thumb'); ?>')">
-                        <p class="c-edition__preview-title"><?= the_title(); ?></p>
-                        <p class="c-edition__preview-city">- <?= $city ?> -</p>
+                <a href="<?= $url ?>" class="c-edition__preview c-edition__preview--static">
+                    <div class="c-edition__preview-container">
+                        <?php the_post_thumbnail('edition-thumb', array( 'class' => 'c-image-hover' )); ?>
+                        <p class="c-edition__preview-title u--horizontal"><?= the_title(); ?></p>
+                        <p class="c-edition__preview-city u--horizontal">- <?= $city ?> -</p>
                     </div>
                 </a>
             <?php endwhile; ?>

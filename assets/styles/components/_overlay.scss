@@ -40,6 +40,7 @@
       }
 
       span:last-child {
+        animation-delay: 200ms;
         animation-name: swirl-2;
       }
     }
@@ -57,7 +58,7 @@
     width: 25px;
     height: 2px;
     background-color: $white;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
     animation-duration: 800ms;
 
     &:first-child {
@@ -75,10 +76,6 @@
     transform: rotate(45deg);
   }
 
-  50% {
-    transform: rotate(180deg);
-  }
-
   100% {
     transform: rotate(405deg);
   }
@@ -87,10 +84,6 @@
 @keyframes swirl-2 {
   0% {
     transform: rotate(-45deg);
-  }
-
-  50% {
-    transform: rotate(180deg);
   }
 
   100% {

@@ -20,25 +20,40 @@
 </div>
 
 <div class="o-base u--border-top">
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4 c-edition__preview">
-            <div class="c-edition__preview-container" style="background-image: url('http://lorempixel.com/433/200/nightlife')">
-                <p class="c-edition__preview-title">Edycja IV</p>
-                <p class="c-edition__preview-city">- Warszawa -</p>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 c-edition__preview">
-            <div class="c-edition__preview-container" style="background-image: url('http://lorempixel.com/433/200/fashion')">
-                <p class="c-edition__preview-title">Edycja III</p>
-                <p class="c-edition__preview-city">- Wrocław -</p>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 c-edition__preview">
-            <div class="c-edition__preview-container" style="background-image: url('http://lorempixel.com/433/200/abstract')">
-                <p class="c-edition__preview-title">Edycja II</p>
-                <p class="c-edition__preview-city">- Kraków -</p>
-            </div>
-        </div>
+    <?php
+        $args = array(
+            'post_type' => 'edition',
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+            'order' => 'DESC',
+            'orderby' => 'date',
+        );
+
+        $query = new WP_Query($args);
+    ?>
+    <div class="c-edition__carousel">
+        <div class="c-edition__carousel-btn prev js-edition-prev is-visible"><span></span></div>
+        <div class="c-edition__carousel-btn next js-edition-next is-visible"><span></span></div>
+
+        <div class="owl-carousel owl-theme">
+            <?php
+            if ( $query->have_posts() ) :
+                while ( $query->have_posts() ) : $query->the_post();
+                $post_id = $post->ID;
+                $city = CFS() -> get('edition_city', $post_id);
+                $url = get_permalink($post_id);
+                ?>
+                <a href="<?= $url ?>" class="c-edition__preview">
+                    <div class="c-edition__preview-container">
+                        <?php the_post_thumbnail('edition-thumb', array( 'class' => 'c-image-hover' )); ?>
+                        <p class="c-edition__preview-title u--horizontal"><?= the_title(); ?></p>
+                        <p class="c-edition__preview-city u--horizontal">- <?= $city ?> -</p>
+                    </div>
+                </a>
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
+
     </div>
 </div>
 

@@ -72,7 +72,8 @@ var sassPaths = [
     'node_modules/normalize-scss/sass',
     'node_modules/sass-mediaqueries',
     'node_modules/flexboxgrid/dist',
-    'bower_components/csswizardry-grids'
+    'bower_components/csswizardry-grids',
+    'bower_components/owl.carousel/dist/assets',
 ];
 
 // ## Reusable Pipelines

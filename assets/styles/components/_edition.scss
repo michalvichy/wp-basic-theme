@@ -2,24 +2,15 @@
 // All styles.
 // ------------------
 .c-edition__preview {
+  @include rectangle(433px, 200px);
+  display: inline-block;
+  margin-bottom: -4px;
   padding: 0;
-
-  &:first-child {
-    padding-left: 7px;
-  }
-
-  &:last-child {
-    padding-right: 7px;
-  }
-
-  & + & {
-    border-left: $border;
-  }
+  border-left: $border;
+  overflow: hidden;
 }
 
 .c-edition__preview--static {
-  @include rectangle(433px, 200px);
-  display: inline-block;
   border: $border;
 
   & + & {
@@ -28,17 +19,30 @@
 }
 
 .c-edition__preview-container {
+  position: relative;
   height: 200px;
   padding: 110px 0 0;
   background: {
-    size: cover;
+    size: 100%;
     repeat: no-repeat;
+    position: center;
   }
   text-align: center;
+
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
 }
 
 .c-edition__preview-title {
+  bottom: 30px;
   margin: 0;
+  pointer-events: none;
+  z-index: 2;
 
   @include min-screen($desktop) {
     margin: 10px 0;
@@ -47,9 +51,12 @@
 }
 
 .c-edition__preview-city {
+  bottom: 20px;
   margin: 0;
   color: $color-tertiary;
   font-weight: 700;
+  pointer-events: none;
+  z-index: 2;
 
   @include min-screen($desktop) {
     font-size: 12px;
@@ -113,6 +120,53 @@
 
     @include min-screen($desktop) {
       margin: 28px 0;
+    }
+  }
+}
+
+.c-edition__carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.c-edition__carousel-btn {
+  $bg-color: #4c4c4c;
+  @include rectangle(32px, 200px);
+  position: absolute;
+  top: 0;
+  transition: opacity 300ms ease-in;
+  background-color: rgba($bg-color, .6);
+  cursor: pointer;
+  opacity: 0;
+  z-index: 5;
+
+  &.is-visible {
+    opacity: 1;
+  }
+
+  &.prev {
+    left: 0;
+
+    span {
+      background-image: url('../images/arrow-left.svg');
+    }
+  }
+
+  &.next {
+    right: 0;
+
+    span {
+      background-image: url('../images/arrow-right.svg');
+    }
+  }
+
+  span {
+    @include center-align();
+    @include square(16px);
+    background: {
+      position: center;
+      size: contain;
+      repeat: no-repeat;
     }
   }
 }
