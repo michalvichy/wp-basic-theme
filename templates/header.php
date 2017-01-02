@@ -12,7 +12,7 @@
                 <?php endif; ?>
             </div>
             <div class="col-xs-6 col-sm-3 u--align-right">
-                <button class="c-btn u--uppercase u--text-primary js-overlay-open" data-target="contact">Contact us</a>
+                <button class="c-btn u--uppercase u--text-primary js-overlay-open" data-target="contact">Kontakt</a>
             </div>
         </div>
     </div>

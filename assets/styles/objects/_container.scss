@@ -20,3 +20,9 @@
 .o-section {
   padding: 20px 0 30px;
 }
+
+.o-section__contact {
+  @include min-screen($tablet) {
+    padding: 0;
+  }
+}

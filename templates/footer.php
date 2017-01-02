@@ -26,7 +26,7 @@
                     </ul>
                 </div>
                 <div class="col-xs-12 col-md-1">
-                    <a href="/contact" class="u--uppercase">Kontakt</a>
+                    <span class="u--uppercase js-overlay-open" data-target="contact">Kontakt</span>
                 </div>
             </div>
         </div>

@@ -13,11 +13,11 @@
     <div class="c-edition__top">
         <div class="o-container">
             <div class="row middle-xs">
-                <div class="col-xs-7 col-sm-4 col-lg-3">
+                <div class="col-xs-7 col-sm-5 col-lg-3">
                     <span class="c-edition__title"><?= the_title(); ?></span><span class="c-edition__switch u--text-primary u--pointer js-overlay-open" data-target="editions">Zmień</span>
                     <p class="c-edition__date"><?= $date; ?> <?= $city; ?></p>
                 </div>
-                <div class="col-xs-5 tablet--hide">
+                <div class="col-xs-5 col-sm-3 col-sm-offset-4 desktop--hide">
                     <div class="c-dropdown js-dropdown">
                         <span>Relacja</span>
                         <ul class="c-dropdown__list u--inline-list">
@@ -27,7 +27,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-xs-5 col-sm-8 col-lg-9 phone--hide tablet--show">
+                <div class="col-xs-5 col-sm-8 col-lg-9 phone--hide desktop--show">
                     <ul class="c-edition__top-menu u--inline-list">
                         <li><button data-target="timeline" class="c-btn c-btn--primary js-overlay-open">Program</button></li>
                         <li><button data-target="menu" class="c-btn c-btn--primary js-overlay-open">Menu</button></li>

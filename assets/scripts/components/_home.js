@@ -2,7 +2,8 @@ window.NS = window.NS || {};
 
 window.NS.home = function($) {
   var $window = $(window);
-  var isDesktop = $window.innerWidth() > 1024 ? true : false;
+  var isDesktop = $window.innerWidth() >= 1024 ? true : false;
+  var isTablet = $window.innerWidth() >= 768 ? true : false;
 
   function initCarousel() {
     var $owl = $('.owl-carousel');
@@ -10,7 +11,14 @@ window.NS.home = function($) {
     var $btnNext = $('.js-edition-next');
 
     $owl.owlCarousel({
-      items: 3,
+      responsive: {
+        768: {
+          items: 2,
+        },
+        1024: {
+          items: 3,
+        }
+      },
       dots: false,
     });
 
@@ -24,7 +32,7 @@ window.NS.home = function($) {
   }
 
   (function() {
-    if (isDesktop) {
+    if (isTablet) {
       initCarousel();
     }
   })();

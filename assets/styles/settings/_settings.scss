@@ -41,5 +41,8 @@ $breakpoint-has-pull: ('phone', 'tablet', 'desktop', 'desktop-medium', 'desktop-
   @include grid-media-query($name) {
     .#{$name}--show { display: inline-block !important; }
     .#{$name}--block { display: block !important; }
+    .#{$name}--center { text-align: center; }
+    .#{$name}--left { text-align: left; }
+    .#{$name}--right { text-align: right; }
   }
 }
