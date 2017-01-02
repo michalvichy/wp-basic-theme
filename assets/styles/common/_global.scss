@@ -16,7 +16,11 @@ body {
 
 img {
   max-width: 100%;
-  margin-bottom: -4px;
+  margin-bottom: -5px;
+
+  @include min-screen($desktop) {
+    margin-bottom: -4px;
+  }
 }
 
 a {

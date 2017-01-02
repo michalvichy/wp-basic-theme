@@ -59,7 +59,6 @@
   "dependencies": {
     "flexboxgrid": "~6.3.1",
     "normalize-scss": "~4.0.3",
-    "sass-mediaqueries": "~1.6.1",
-    "slick-carousel": "~1.6.0"
+    "sass-mediaqueries": "~1.6.1"
   }
 }

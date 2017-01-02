@@ -92,9 +92,33 @@ window.NS.common = function($) {
     $('.js-perfect').perfectScrollbar();
   }
 
+  function dropdown() {
+    var $dropdown = $('.js-dropdown');
+    var $placeholder = $dropdown.find('> span');
+    var $dropdownList = $dropdown.find('.c-dropdown__list');
+    var $dropdownItems = $dropdownList.children();
+
+    $placeholder.on('click', function(event) {
+      $dropdown.toggleClass('is-open');
+    });
+
+    $dropdownItems.each(function(index, item) {
+      var $this = $(this);
+      var text = $this.html();
+
+      $this.on('click', function() {
+        $dropdownItems.removeClass('active');
+        $this.addClass('active');
+        $placeholder.html(text);
+        $dropdown.removeClass('is-open');
+      });
+    });
+  }
+
   (function() {
     openOverlay();
     closeOverlay();
     perfect();
+    dropdown();
   })();
 };
