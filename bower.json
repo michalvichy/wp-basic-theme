@@ -10,11 +10,19 @@
     "jquery": "~2.2.1",
     "csswizardry-grids": "~2.2.0",
     "slick-carousel": "slick.js#^1.6.0",
-    "owl.carousel": "^2.2.0"
+    "owl.carousel": "^2.2.0",
+    "perfect-scrollbar": "^0.6.15",
+    "jquery-throttle-debounce": "*"
   },
   "overrides": {
+    "perfect-scrollbar": {
+      "main": "js/perfect-scrollbar.jquery.js"
+    },
     "owl.carousel": {
       "main": "dist/owl.carousel.js"
+    },
+    "jquery-throttle-debounce": {
+      "main": "jquery.ba-throttle-debounce.js"
     }
   }
 }

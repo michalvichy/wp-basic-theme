@@ -4,6 +4,20 @@
   padding: 20px 0 10px;
   border-top: $border;
   background-color: $color-secondary;
+  text-align: center;
+
+  @include min-screen($desktop) {
+    text-align: left;
+  }
+}
+
+.c-footer__menu {
+  margin: 20px 0;
+  padding: 0;
+
+  @include min-screen($desktop) {
+    margin: 0;
+  }
 }
 
 .c-footer__menu-item {

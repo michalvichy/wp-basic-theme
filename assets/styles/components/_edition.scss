@@ -2,12 +2,20 @@
 // All styles.
 // ------------------
 .c-edition__preview {
-  @include rectangle(433px, 200px);
-  display: inline-block;
-  margin-bottom: -4px;
+  @include rectangle(433px, 120px);
+  display: block;
+  max-width: 100%;
   padding: 0;
-  border-left: $border;
+  border: $border;
+  border-width: 0 0 1px 0;
   overflow: hidden;
+
+  @include min-screen($desktop) {
+    @include rectangle(433px, 200px);
+    display: inline-block;
+    margin-bottom: -4px;
+    border-width: 0 0 0 1px;
+  }
 }
 
 .c-edition__preview--static {
@@ -20,7 +28,7 @@
 
 .c-edition__preview-container {
   position: relative;
-  height: 200px;
+  height: 100%;
   padding: 110px 0 0;
   background: {
     size: 100%;
@@ -41,24 +49,28 @@
 .c-edition__preview-title {
   bottom: 30px;
   margin: 0;
+  font-size: 20px;
   pointer-events: none;
   z-index: 2;
 
   @include min-screen($desktop) {
+    bottom: 30px;
     margin: 10px 0;
     font-size: 26px;
   }
 }
 
 .c-edition__preview-city {
-  bottom: 20px;
+  bottom: 15px;
   margin: 0;
   color: $color-tertiary;
+  font-size: 10px;
   font-weight: 700;
   pointer-events: none;
   z-index: 2;
 
   @include min-screen($desktop) {
+    bottom: 20px;
     font-size: 12px;
   }
 }
@@ -132,6 +144,7 @@
 .c-edition__carousel-btn {
   $bg-color: #4c4c4c;
   @include rectangle(32px, 200px);
+  display: none;
   position: absolute;
   top: 0;
   transition: opacity 300ms ease-in;
@@ -139,6 +152,10 @@
   cursor: pointer;
   opacity: 0;
   z-index: 5;
+
+  @include min-screen($desktop) {
+    display: block;
+  }
 
   &.is-visible {
     opacity: 1;

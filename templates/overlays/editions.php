@@ -10,9 +10,9 @@
     $query = new WP_Query($args);
 ?>
 
-<div class="c-overlay js-overlay">
+<div id="editions" class="c-overlay js-overlay">
     <div class="c-overlay__close js-overlay-close">Zamknij  <div class="c-overlay__close-icon"><span></span><span></span></div></div>
-    <div class="c-overlay__content">
+    <div class="c-overlay__content js-perfect">
         <?php
             if ( $query->have_posts() ) :
                 while ( $query->have_posts() ) : $query->the_post();

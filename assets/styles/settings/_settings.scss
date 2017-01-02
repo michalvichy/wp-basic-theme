@@ -26,3 +26,20 @@ $breakpoints: (
 $breakpoint-has-widths: ('phone', 'tablet', 'desktop', 'desktop-medium', 'desktop-wide');
 $breakpoint-has-push: ('phone', 'tablet', 'desktop', 'desktop-medium', 'desktop-wide');
 $breakpoint-has-pull: ('phone', 'tablet', 'desktop', 'desktop-medium', 'desktop-wide');
+
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 1);
+
+  @include grid-media-query($name) {
+    .#{$name}--hide { display: none !important; }
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 1);
+
+  @include grid-media-query($name) {
+    .#{$name}--show { display: inline-block !important; }
+    .#{$name}--block { display: block !important; }
+  }
+}

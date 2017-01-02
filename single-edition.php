@@ -14,15 +14,15 @@
         <div class="o-container">
             <div class="row middle-sm">
                 <div class="col-sm-4 col-lg-3">
-                    <span class="c-edition__title"><?= the_title(); ?></span><span class="u--text-primary u--pointer js-overlay-open">Zmień</span>
+                    <span class="c-edition__title"><?= the_title(); ?></span><span class="u--text-primary u--pointer js-overlay-open" data-target="editions">Zmień</span>
                     <p class="c-edition__date"><?= $date; ?> <?= $city; ?></p>
                 </div>
                 <div class="col-sm-8 col-lg-9">
                     <ul class="c-edition__top-menu u--inline-list">
-                        <li><button class="c-btn c-btn--primary">Program</button></li>
-                        <li><button class="c-btn c-btn--primary">Menu</button></li>
+                        <li><button data-target="timeline" class="c-btn c-btn--primary js-overlay-open">Program</button></li>
+                        <li><button data-target="menu" class="c-btn c-btn--primary js-overlay-open">Menu</button></li>
                         <li><button class="c-btn c-btn--primary active">Relacja</button></li>
-                        <li><button class="c-btn c-btn--primary">Szefowie kuchni</button></li>
+                        <li><button data-target="chefs" class="c-btn c-btn--primary js-overlay-open">Szefowie kuchni</button></li>
                     </ul>
                 </div>
             </div>
@@ -36,7 +36,7 @@
             <div class="u--align-center">
                 <div class="c-edition__gallery-intro u--align-center">
                     <?php the_post_thumbnail('edition-thumb', array( 'class' => 'c-image-hover' )); ?>
-                    <a href="#" class="c-btn c-btn--primary">Zobacz fotorelację</a>
+                    <button class="c-btn c-btn--primary js-overlay-open" data-target="gallery">Zobacz fotorelację</a>
                 </div>
             </div>
 
@@ -49,4 +49,8 @@
     </div>
 </div>
 
-<?php get_template_part('templates/editions', 'overlay'); ?>
+<?php get_template_part('templates/overlays/editions'); ?>
+<?php get_template_part('templates/overlays/menu'); ?>
+<?php get_template_part('templates/overlays/timeline'); ?>
+<?php get_template_part('templates/overlays/chefs'); ?>
+<?php get_template_part('templates/overlays/gallery'); ?>

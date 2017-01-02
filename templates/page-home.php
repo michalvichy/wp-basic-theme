@@ -38,26 +38,32 @@
         <div class="owl-carousel owl-theme">
             <?php
             if ( $query->have_posts() ) :
+                $i = 1;
+
                 while ( $query->have_posts() ) : $query->the_post();
-                $post_id = $post->ID;
-                $city = CFS() -> get('edition_city', $post_id);
-                $url = get_permalink($post_id);
+                    $post_id = $post->ID;
+                    $city = CFS() -> get('edition_city', $post_id);
+                    $url = get_permalink($post_id);
+
                 ?>
-                <a href="<?= $url ?>" class="c-edition__preview">
+                <a href="<?= $url ?>" class="c-edition__preview <?php echo $i > 3 ? 'phone--hide desktop--block' : ''; ?>">
                     <div class="c-edition__preview-container">
                         <?php the_post_thumbnail('edition-thumb', array( 'class' => 'c-image-hover' )); ?>
                         <p class="c-edition__preview-title u--horizontal"><?= the_title(); ?></p>
                         <p class="c-edition__preview-city u--horizontal">- <?= $city ?> -</p>
                     </div>
                 </a>
-            <?php endwhile; ?>
-        <?php endif; ?>
-    </div>
+                <?php $i++; endwhile; ?>
+            <?php endif; ?>
 
+        </div>
+        <div class="o-btn-container u--align-center desktop--hide">
+            <button class="c-btn c-btn--primary js-overlay-open" data-target="editions">Starsze edycje</button>
+        </div>
     </div>
 </div>
 
-<div class="o-base c-section-news u--border-top">
+<div class="o-base c-section-news">
     <div class="o-container">
         <div class="o-section">
             <div class="row center-xs">
@@ -69,7 +75,7 @@
                     </p>
 
                     <div class="o-btn-container">
-                        <a href="#" class="c-btn c-btn--primary">Czytaj więcej</a>
+                        <button class="c-btn c-btn--primary js-overlay-open" data-target="news">Czytaj więcej</a>
                     </div>
                 </div>
             </div>
@@ -91,3 +97,7 @@
         </div>
     </div>
 </div>
+
+<?php get_template_part('templates/overlays/editions'); ?>
+<?php get_template_part('templates/overlays/contact'); ?>
+<?php get_template_part('templates/overlays/news'); ?>

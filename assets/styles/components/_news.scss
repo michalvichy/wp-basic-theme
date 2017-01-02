@@ -6,4 +6,8 @@
     repeat: no-repeat;
     size: cover;
   }
+
+  @include min-screen($desktop) {
+    border-top: $border;
+  }
 }

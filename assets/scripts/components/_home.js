@@ -1,7 +1,8 @@
 window.NS = window.NS || {};
 
 window.NS.home = function($) {
-  var $window = $('window');
+  var $window = $(window);
+  var isDesktop = $window.innerWidth() > 1024 ? true : false;
 
   function initCarousel() {
     var $owl = $('.owl-carousel');
@@ -23,6 +24,8 @@ window.NS.home = function($) {
   }
 
   (function() {
-    initCarousel();
+    if (isDesktop) {
+      initCarousel();
+    }
   })();
 };

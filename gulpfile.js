@@ -74,6 +74,7 @@ var sassPaths = [
     'node_modules/flexboxgrid/dist',
     'bower_components/csswizardry-grids',
     'bower_components/owl.carousel/dist/assets',
+    'bower_components/perfect-scrollbar/css',
 ];
 
 // ## Reusable Pipelines

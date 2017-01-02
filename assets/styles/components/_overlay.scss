@@ -1,37 +1,49 @@
 // Overlay
 // --------
 .c-overlay {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  transition: opacity .5s;
   background-color: $overlay-bg;
+  opacity: 0;
+  // visibility: hidden;
+  pointer-events: none;
   z-index: 10;
 
   &.is-open {
-    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    // visibility: visible;
   }
 }
 
 .c-overlay__content {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 50px auto 0;
+  padding: 0 20px 100px;
   text-align: center;
 
   @include min-screen($desktop) {
-    padding: 120px 0 0;
+    margin: 120px auto 0;
+    padding: 20px 0 200px;
   }
 }
 
 .c-overlay__close {
   position: absolute;
-  top: 50px;
-  right: 20%;
+  top: 5px;
+  right: 20px;
   padding: 12px 20px;
   color: $color-tertiary;
   cursor: pointer;
+
+  @include min-screen($desktop) {
+    top: 50px;
+    right: 20%;
+  }
 
   &:hover {
     .c-overlay__close-icon {
