@@ -9,14 +9,12 @@
   transition: opacity .5s;
   background-color: $overlay-bg;
   opacity: 0;
-  // visibility: hidden;
   pointer-events: none;
   z-index: 10;
 
   &.is-open {
     opacity: 1;
     pointer-events: auto;
-    // visibility: visible;
   }
 }
 
@@ -27,8 +25,11 @@
   text-align: center;
 
   @include min-screen($desktop) {
-    margin: 120px auto 0;
     padding: 20px 0 200px;
+  }
+
+  &.wide {
+    max-width: 800px;
   }
 }
 

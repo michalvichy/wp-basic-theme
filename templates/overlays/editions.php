@@ -13,6 +13,7 @@
 <div id="editions" class="c-overlay js-overlay">
     <div class="c-overlay__close js-overlay-close">Zamknij  <div class="c-overlay__close-icon"><span></span><span></span></div></div>
     <div class="c-overlay__content js-perfect">
+        <h2 class="c-headline c-headline--center">Wybierz edycję</h2>
         <?php
             if ( $query->have_posts() ) :
                 while ( $query->have_posts() ) : $query->the_post();

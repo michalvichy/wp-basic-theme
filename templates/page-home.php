@@ -10,9 +10,7 @@
                     <p class="c-paragraph">
                         Poland Restaurant Forum by Nespresso to platforma dyskusji i wymiany doświadczeń osób związanych z branżą horeca: restauratorów szefów kuchni, sommelierów, mediów branżowych i pasjonatów gastronomii. Odbywające się cyklicznie spotkania ma na celu wymianę doświadczeń wszystkich stron zainteresowanych gastronomią oraz dyskusję o kwestiach nurtujących branżę. Forum odbywa się w różnych miastach Polski, uwzględniając lokalną specyfikę przemysłu gastronomicznego. Ciekawe dyskusje, goście specjalni z międzynarodowym doświadczeniem, networking i kuchnia najwyższej jakości – to wyróżniki każdej edycji.
                     </p>
-                    <div class="o-btn-container">
-                        <a href="#" class="c-btn c-btn--primary">Aktualności</a>
-                    </div>
+                    <div class="o-btn-container"></div>
                 </div>
             </div>
         </div>
