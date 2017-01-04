@@ -14,12 +14,16 @@
 
 .c-single-news {
   position: relative;
-  margin: 0 0 -14px 130px;
-  padding: 0 0 50px 40px;
-  border-left: 1px solid $color-primary;
+  margin: 0 0 20px;
   font-weight: 300;
   line-height: 1.7;
   text-align: left;
+
+  @include min-screen($tablet) {
+    margin: 0 0 -14px 130px;
+    padding: 0 0 50px 40px;
+    border-left: 1px solid $color-primary;
+  }
 
   &:nth-child(2) {
     margin-top: 60px;
@@ -31,7 +35,7 @@
 
   .dot {
     @include square(14px);
-    display: block;
+    display: none;
     position: absolute;
     top: 0;
     left: -8px;
@@ -41,40 +45,56 @@
     color: $color-primary;
     text-align: center;
 
+    @include min-screen($tablet) {
+      display: block;
+    }
+
     span {
       @include square(3px);
       @include center-align();
       border-radius: 50%;
       background-color: $color-primary;
     }
+
   }
 
   .date-box {
-    @include square(80px);
-    position: absolute;
-    top: -34px;
-    left: -130px;
-    border: 1px solid $color-primary;
-    border-radius: 4px;
     font-size: 16px;
-    text-align: center;
+
+    @include min-screen($tablet) {
+      @include square(80px);
+      position: absolute;
+      top: -34px;
+      left: -130px;
+      border: 1px solid $color-primary;
+      border-radius: 4px;
+      text-align: center;
+    }
 
     &::after {
-      @include rectangle(43px, 1px);
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      background-color: $color-primary;
+      @include min-screen($tablet) {
+        @include rectangle(43px, 1px);
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        background-color: $color-primary;
+      }
     }
 
     .date {
-      @include center-align();
-      margin: 0;
+      margin: 2px 0;
+
+      @include min-screen($tablet) {
+        @include center-align();
+        margin: 0;
+      }
 
       span {
-        display: block;
+        @include min-screen($tablet) {
+          display: block;
+        }
       }
     }
 
@@ -92,6 +112,11 @@
 .s-news {
   position: relative;
   top: -4px;
+  font-size: 12px;
+
+  @include min-screen($tablet) {
+    font-size: 14px;
+  }
 
   p:first-child {
     margin-top: 0;
