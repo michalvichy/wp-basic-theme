@@ -3,7 +3,10 @@
 .c-image-hover {
   transition: transform $img-animation;
 
-  &:hover {
-    transform: scale(1.1);
+  @include min-screen($desktop) {
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
   }
 }

@@ -5,6 +5,10 @@
   font-weight: 300;
   line-height: 2;
 
+  @include min-screen($tablet) {
+    font-size: 14px;
+  }
+
   @include min-screen($desktop) {
     font-size: 15px;
     line-height: 1.5;

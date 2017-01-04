@@ -30,7 +30,7 @@
         $query = new WP_Query($args);
     ?>
     <div class="c-edition__carousel">
-        <div class="c-edition__carousel-btn prev js-edition-prev is-visible"><span></span></div>
+        <div class="c-edition__carousel-btn prev js-edition-prev"><span></span></div>
         <div class="c-edition__carousel-btn next js-edition-next is-visible"><span></span></div>
 
         <div class="owl-carousel owl-theme">

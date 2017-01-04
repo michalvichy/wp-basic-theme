@@ -7,8 +7,12 @@
   max-width: 100%;
   padding: 0;
   border: $border;
-  border-width: 0 0 1px 0;
+  border-width: 0 0 1px;
   overflow: hidden;
+
+  @include min-screen($tablet) {
+    @include rectangle(433px, 160px);
+  }
 
   @include min-screen($desktop) {
     @include rectangle(433px, 200px);
@@ -20,6 +24,10 @@
 
 .c-edition__preview--static {
   border: $border;
+
+  @include min-screen($tablet) {
+    margin: 0 auto;
+  }
 
   & + & {
     margin-top: 20px;
@@ -157,7 +165,7 @@
 
 .c-edition__carousel-btn {
   $bg-color: #4c4c4c;
-  @include rectangle(32px, 200px);
+  @include rectangle(32px, 160px);
   display: none;
   position: absolute;
   top: 0;
@@ -168,6 +176,7 @@
   z-index: 5;
 
   @include min-screen($desktop) {
+    @include rectangle(32px, 200px);
     display: block;
   }
 
