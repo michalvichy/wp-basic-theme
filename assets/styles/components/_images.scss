@@ -10,3 +10,20 @@
     }
   }
 }
+
+.c-gallery__item {
+  @include square(125px);
+  display: inline-block;
+  margin: 10px;
+  border: 3px solid $white;
+  border-radius: 4px;
+  background: {
+    position: center;
+    size: cover;
+    repeat: no-repeat;
+  }
+}
+
+.c-gallery__img {
+  display: none;
+}

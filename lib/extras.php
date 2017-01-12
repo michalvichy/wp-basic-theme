@@ -69,3 +69,9 @@ function custom_parse_request_tricksy( $query ) {
     }
 }
 add_action('pre_get_posts', __NAMESPACE__ . '\\custom_parse_request_tricksy');
+
+function insert_overlay($name, $fields) {
+    if (!empty($fields['edition_'.$name])) {
+        get_template_part('templates/overlays/'.$name);
+    }
+}

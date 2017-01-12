@@ -25,11 +25,16 @@
   text-align: center;
 
   @include min-screen($desktop) {
-    padding: 20px 0 200px;
+    margin: 80px auto 0;
+    padding: 0 0 200px;
   }
 
   &.wide {
     max-width: 800px;
+  }
+
+  &.super-wide {
+    max-width: 1000px;
   }
 }
 
@@ -42,7 +47,7 @@
   cursor: pointer;
 
   @include min-screen($desktop) {
-    top: 50px;
+    top: 40px;
     right: 20%;
   }
 

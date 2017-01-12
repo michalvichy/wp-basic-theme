@@ -1,4 +1,7 @@
 <?php
+    namespace Roots\Sage\Extras;
+    use Roots\Sage\Setup;
+
     setlocale(LC_TIME, 'pl_PL.UTF-8');
     $fields = CFS()->get(false, false);
     $report = $fields['edition_report'];
@@ -60,7 +63,8 @@
 </div>
 
 <?php get_template_part('templates/overlays/editions'); ?>
-<?php get_template_part('templates/overlays/menu'); ?>
-<?php get_template_part('templates/overlays/timeline'); ?>
-<?php get_template_part('templates/overlays/chefs'); ?>
-<?php get_template_part('templates/overlays/gallery'); ?>
+
+<?php insert_overlay('gallery', $fields) ?>
+<?php insert_overlay('menu', $fields) ?>
+<?php insert_overlay('timeline', $fields) ?>
+<?php insert_overlay('chefs', $fields) ?>
