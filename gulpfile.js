@@ -76,6 +76,7 @@ var sassPaths = [
     'bower_components/owl.carousel/dist/assets',
     'bower_components/perfect-scrollbar/css',
     'bower_components/select2/dist/css',
+    'bower_components/lightgallery/dist/css',
 ];
 
 // ## Reusable Pipelines
